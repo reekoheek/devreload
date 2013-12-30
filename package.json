@@ -1,6 +1,6 @@
 {
   "name": "devreload",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Development auto reloader for browser",
   "main": "lib/devreload.js",
   "scripts": {
@@ -10,6 +10,9 @@
     "development",
     "reload"
   ],
+  "bin": {
+    "devreload": "./bin/devreload"
+  },
   "preferGlobal": true,
   "author": "Ganesha <reekoheek@gmail.com>",
   "contributors": [
@@ -29,6 +32,6 @@
     "url": "https://github.com/reekoheek/devreload.git"
   },
   "engines": {
-    "node": ">=0.10.21"
+    "node": ">=0.10.0"
   }
 }
