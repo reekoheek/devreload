@@ -1,6 +1,6 @@
 {
   "name": "devreload",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Development auto reloader for browser",
   "main": "lib/devreload.js",
   "scripts": {
