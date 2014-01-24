@@ -1,4 +1,61 @@
 #!/usr/bin/env node
 
-require('../lib/devreload').run();
+/**
+ * loglevel
+ *  0 - ERROR
+ *  1 - WARN
+ *  2 - INFO
+ *  3 - DEBUG
+ */
+var argv = require('optimist').argv,
+    devreload = require('../lib/devreload'),
+    help = function() {
+        console.log('devreload version ' + devreload.version);
+        console.log();
+        console.log(devreload.description);
+        console.log();
+        console.log('Usage: devreload [-w|--watch=<dir>]');
+        console.log('                 [-p|--port=<port>]');
+        console.log('                 [-i|--interval=<interval>]');
+        console.log('                 [-l|--loglevel=<loglevel>');
+        process.exit(1);
+    },
+    options = {};
+
+if (argv.h || argv.help) {
+    help();
+}
+
+if (argv.w || argv.watch) {
+    options.watch = (argv.w || argv.watch).split(':');
+}
+
+if (argv.p || argv.port) {
+    var port = parseInt(argv.p || argv.port, 10);
+    if (port < 1) {
+        help();
+    } else {
+        options.port = port;
+    }
+}
+
+if (argv.i || argv.interval) {
+    var interval = parseInt(argv.i || argv.interval, 10);
+    if (interval < 500) {
+        help();
+    } else {
+        options.interval = parseInt(interval, 10);
+    }
+}
+
+if (argv.l || argv.loglevel) {
+    var loglevel = parseInt(argv.l || argv.loglevel, 10);
+    if (loglevel < 0) {
+        help();
+    } else {
+        options.loglevel = loglevel;
+    }
+}
+
+devreload.listen(options);
 
