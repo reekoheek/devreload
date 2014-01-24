@@ -17,15 +17,15 @@ You can use devreload as:
 npm install -g devreload
 ```
 
-### 1
+### 1 Adding devreload script to your html files
+```html
+<script type="text/javascript" src="http://localhost:9999/devreload.js"></script>
+```
+
+### 2 Run devreload from your project path
 ```
 cd [project-path]
 devreload
-```
-
-### 2 Adding devreload script to your html files
-```html
-<script type="text/javascript" src="http://localhost:9999/devreload.js"></script>
 ```
 
 ## Or usage as embedded package to node web app
