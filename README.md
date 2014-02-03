@@ -43,13 +43,16 @@ var server = http.createServer();
 require('devreload').listen(server, {
     watch: [__dirname+'/views', __dirname+'/static'],
     interval: 500,
-    port: 3001
+    port: 9999
 })
 ```
 
-### 2. Include the client script in your page
+### 2. Include the client script in your html/jade
+```html
+<script defer src='//localhost:9999/devreload.js'></script>
+```
 ```jade
-script(defer, src='//localhost:3001/devreload.js')
+script(defer, src='//localhost:9999/devreload.js')
 ```
 
 # Contributors:
