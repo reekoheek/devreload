@@ -1,6 +1,6 @@
 {
   "name": "devreload",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Development auto reloader for browser.\ndevreload monitors changes in the file system. As soon as you save a file,\nit is notify browser that open your website, and the browser is refreshed.",
   "main": "lib/devreload.js",
   "scripts": {
