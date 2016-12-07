@@ -29,7 +29,12 @@
   "dependencies": {
     "optimist": "~0.6.0",
     "socket.io": "~0.9.16",
+    "methodder": "0.0.3",
     "colors": "~0.6.2"
+  },
+  "devDependencies": {
+    "express": "~3.0.0",
+    "nodemon": "~1.0.12"
   },
   "repository": {
     "type": "git",

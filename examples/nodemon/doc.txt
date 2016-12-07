@@ -1,0 +1,2 @@
+Use "node monitor" and save this file to test nodemon usage with devreload.
+You'll know it's working when devreload says: "LOG reload called by external process"
